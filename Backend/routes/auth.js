@@ -6,7 +6,7 @@ const userModel = require("../models/UsersAdd");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// User registration
+// Admin registration
 router.post("/register", async (req, res) => {
   try {
     // const {} = userDetails
@@ -26,7 +26,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// User login
+// Admin login
 router.post("/login", async (req, res) => {
   try {
     
@@ -93,16 +93,7 @@ router.post("/login", async (req, res) => {
             .json({ error: "Authentication failed- User doesn't exists" });
         }
         console.log("sd")
-        // const passwordMatch = await bcrypt.compare(password, user.password);
-
-
-        // if (!passwordMatch) {
-
-        //   console.log("sasd")
-        //   return res
-        //     .status(401)
-        //     .json({ error: "Authentication failed- password doesn't match" });
-        // }
+    
 
         if (password === user.password) {
         
