@@ -55,14 +55,14 @@ function FormtablePage() {
             userRoll : "",
             mobile : ""
           })
-
+          alert(data.data.message)
       }
   }
   const getFetchData = async()=>{
     const data = await axios.get("/")
     console.log(data)
     if(data.data.success){
-        setDataList(data.data.data)
+      setDataList(data.data.data)
     }
   }
   useEffect(()=>{

@@ -67,17 +67,13 @@
   border-radius: 5px;
 }
 
-.container{
-  width: 100%;
- 
-}
 .tableContainer table thead tr{
   background-color: #f0eaea;
   
 }
 .tableContainer table thead tr th,
 .tableContainer table tbody tr td{
-  min-width: 100%;
+  min-width: 178px;
   padding: 7px;
   text-align: center;
 }

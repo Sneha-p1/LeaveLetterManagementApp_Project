@@ -16,8 +16,22 @@ const Formtable = ({handleSubmit,handleOnChange,handleclose,rest}) => {
               <label htmlFor="password">Password : </label>
               <input type="password" id="password" name="password" className='border-2 rounded-md h-[35px]' onChange={handleOnChange} value={rest.password}/>
 
-              <label htmlFor="userType">User Type : </label>
-              <input type="text" id="userType" name="userType" className='border-2 rounded-md h-[35px]' onChange={handleOnChange} value={rest.userType}/>
+              {/* <label htmlFor="userType">User Type : </label>
+              <input type="text" id="userType" name="userType" className='border-2 rounded-md h-[35px]' onChange={handleOnChange} value={rest.userType}/> */}
+        
+        <label htmlFor="userType">User Type: </label>
+        <select
+          id="userType"
+          name="userType"
+          className="border-2 rounded-md h-[35px]"
+          onChange={handleOnChange}
+          value={rest.userType}
+        >
+          <option value="" disabled>Select User Type</option>
+          <option value="user">User</option>
+          <option value="Manager">Manager</option>
+        </select>
+
 
               <label htmlFor="userRoll">Department : </label>
               <input type="text" id="userRoll" name="userRoll" className='border-2 rounded-md h-[35px]' onChange={handleOnChange} value={rest.userRoll}/>
