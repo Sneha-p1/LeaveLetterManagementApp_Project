@@ -40,7 +40,7 @@ const Formtable = ({handleSubmit,handleOnChange,handleclose,rest}) => {
               <label htmlFor="mobile">Mobile : </label>
               <input type="number" id="mobile" name="mobile" className='border-2 rounded-md h-[35px]' onChange={handleOnChange} value={rest.mobile}/>
 
-              <button className="btn">Submit</button>
+              <button className="btn" type='submit'>Submit</button>
             </form>
     </div>
   )

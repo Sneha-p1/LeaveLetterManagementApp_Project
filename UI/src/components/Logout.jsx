@@ -5,7 +5,8 @@ import { toast } from 'react-toastify'
 const Logout = () => {
     
     const navigate = useNavigate()
-    const logout = async () =>{
+    const logout = async () => {
+        console.log('reached')
         try{
             const res = await fetch('api/logout')
             if(res.ok){
