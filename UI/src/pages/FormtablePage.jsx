@@ -1,5 +1,4 @@
 import '../App.css';
-// import {MdClose} from "react-icons/md"
 import { useEffect, useState } from 'react';
 import axios from "axios"
 import Formtable from '../components/Formtable';
@@ -45,7 +44,7 @@ function FormtablePage() {
       console.log(data)
       if(data.data.success){
           setAddSection(false)
-          alert(data.data.message)
+          alert(data.message)
           getFetchData()
           setFormData({
             username : "",
@@ -55,7 +54,6 @@ function FormtablePage() {
             userRoll : "",
             mobile : ""
           })
-          alert(data.data.message)
       }
   }
   const getFetchData = async()=>{
